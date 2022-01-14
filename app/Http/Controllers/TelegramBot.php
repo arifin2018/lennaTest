@@ -24,22 +24,18 @@ class TelegramBot extends Controller
     public function testing()
     {
         $telegram = new Api(env('TELEGRAM_BOT_TOKEN'));
-
         $updates = $telegram->getWebhookUpdate();
         if(isset($updates['messages'])){
-
             $text = $updates['messages']['text'];
             $chat_id = $updates['messages']['id'];
-
             $telegram->sendMessage([
                 'chat_id'   => $chat_id,
                 'text'      => 'test webhook'
             ]);
-
         }else{
             $telegram->sendMessage([
                 'chat_id'   => env('CHAT_BOT_GROUP'),
-                'text'      => 'test webhook'
+                'text'      => 'gagal'
             ]);
         }
     }
