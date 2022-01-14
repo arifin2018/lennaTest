@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('send-message', [TelegramBot::class, 'index']);
+Route::post('testing/send-message', [TelegramBot::class, 'testing']);
