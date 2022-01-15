@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\TelegramBot;
 use Illuminate\Http\Request;
+use Telegram\Bot\Traits\Telegram;
+use App\Http\Controllers\TelegramBot;
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -19,5 +19,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', [TelegramBot::class, 'testing']);
 Route::post('send-message', [TelegramBot::class, 'index']);
-Route::post('testing/webhook', [TelegramBot::class, 'testing']);
+
+Route::post('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', function () {
+    Telegram::getWebhookUpdates();
+
+    return 'ok';
+});
