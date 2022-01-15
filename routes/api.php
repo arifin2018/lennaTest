@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', [TelegramBot::class, 'testing']);
+Route::get('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', [TelegramBot::class, 'testing']);
 Route::post('send-message', [TelegramBot::class, 'index']);
 
 // Route::post('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', function () {
@@ -27,3 +27,4 @@ Route::post('send-message', [TelegramBot::class, 'index']);
 
 //     return 'ok';
 // });
+// Route::post('test/webhook', function () { $update = Telegram::commandsHandler(true); return 'salam in revale'; });

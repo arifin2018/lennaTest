@@ -1,5 +1,4 @@
 <?php
-
 return [
     /*
     |--------------------------------------------------------------------------
@@ -197,7 +196,7 @@ return [
     |
     */
     'shared_commands'              => [
-        // 'start' => Acme\Project\Commands\StartCommand::class,
+        'start' => Acme\Project\Commands\StartCommand::class,
         // 'stop' => Acme\Project\Commands\StopCommand::class,
         // 'status' => Acme\Project\Commands\StatusCommand::class,
     ],
