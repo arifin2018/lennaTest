@@ -28,6 +28,8 @@ class TelegramBot extends Controller
         // $updates = $telegram->setWebHook("https://tesbotlenna.herokuapp.com");
         $updates = $telegram->getWebhookUpdate();
 
+        return $updates['message'];
+
         if(isset($updates['message'])){
             $text = $updates['message']['text'];
             $chat_id = $updates['message']['id'];
