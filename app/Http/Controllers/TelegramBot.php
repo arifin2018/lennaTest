@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Telegram\Bot\Api;
 use Illuminate\Http\Request;
-use Telegram\Bot\Laravel\Facades\Telegram;
+use Telegram\Bot\Traits\Telegram;
 
 class TelegramBot extends Controller
 {
@@ -23,11 +23,11 @@ class TelegramBot extends Controller
 
     public function testing()
     {
-        // $telegram = new Api(env('TELEGRAM_BOT_TOKEN'));
-        // $updates = $telegram->getWebhookUpdates();
-        $telegram = new Telegram();
+        $telegram = new Api(env('TELEGRAM_BOT_TOKEN'));
+
         $updates = $telegram->getWebhookUpdates();
         return $updates;
+
         if(isset($updates['message'])){
             $text = $updates['message']['text'];
             $chat_id = $updates['message']['id'];
