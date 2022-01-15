@@ -29,12 +29,12 @@ class TelegramBot extends Controller
         if(isset($updates['message'])){
             $text = $updates['message']['text'];
             $chat_id = $updates['message']['id'];
-            $telegram->sendMessage([
+            return $telegram->sendMessage([
                 'chat_id'   => $chat_id,
                 'text'      => $text
             ]);
         }else{
-            $telegram->sendMessage([
+            return $telegram->sendMessage([
                 'chat_id'   => env('CHAT_BOT_GROUP'),
                 'text'      => 'gagal'
             ]);
