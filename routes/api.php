@@ -22,8 +22,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', [TelegramBot::class, 'testing']);
 Route::post('send-message', [TelegramBot::class, 'index']);
 
-Route::post('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', function () {
-    Telegram::getWebhookUpdates();
+// Route::post('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', function () {
+//     Telegram::getWebhookUpdates();
 
-    return 'ok';
-});
+//     return 'ok';
+// });
