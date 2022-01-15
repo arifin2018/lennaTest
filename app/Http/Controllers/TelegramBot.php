@@ -26,14 +26,14 @@ class TelegramBot extends Controller
         $telegram = new Api(env('TELEGRAM_BOT_TOKEN'));
 
         // $updates = $telegram->setWebHook("https://tesbotlenna.herokuapp.com");
-        $updates = $telegram->getUpdates();
+        $updates = $telegram->getWebhookUpdate();
 
         if(isset($updates['message'])){
-            $text = $updates['message']['text'];
+            // $text = $updates['message']['text'];
             $chat_id = $updates['message']['id'];
             $telegram->sendMessage([
                 'chat_id'   => $chat_id,
-                'text'      => $text
+                'text' => 'Hello world!'
             ]);
         }else{
             $telegram->sendMessage([
