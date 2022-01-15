@@ -25,8 +25,8 @@ class TelegramBot extends Controller
     {
         $telegram = new Api(env('TELEGRAM_BOT_TOKEN'));
 
+        return $telegram;
         $updates = $telegram->getWebhookUpdates();
-        return $updates;
 
         if(isset($updates['message'])){
             $text = $updates['message']['text'];
