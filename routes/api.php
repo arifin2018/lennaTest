@@ -24,7 +24,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::post('logout', [AuthController::class, 'logout'])->name('logout');
 });
 
-Route::get('5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook', [TelegramBot::class, 'testing']);
+Route::get('5025800924AAG6ghTu5HOqtghJaLcaODTOPn0RjP8rWk/webhook', [TelegramBot::class, 'testing']);
 Route::post('send-message', [TelegramBot::class, 'index']);
 
 // https://api.telegram.org/bot5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/setwebhook?url=https://tesbotlenna.herokuapp.com/api/5025800924:AAG6ghT_u5HOqtghJaLcaODTOPn0RjP8rWk/webhook
