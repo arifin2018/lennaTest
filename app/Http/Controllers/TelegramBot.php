@@ -36,6 +36,10 @@ class TelegramBot extends Controller
                     'chat_id'   => $chat_id,
                     'text' => 'anda berhasil masuk'
                 ]);
+                $telegram->sendMessage([
+                    'chat_id'   => $chat_id,
+                    'text' => 'silahkan masukan angka 1 - 10'
+                ]);
             }else{
                 $telegram->sendMessage([
                     'chat_id'   => $chat_id,
