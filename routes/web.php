@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return 'berhasil deploy';
 });
+
+
+Route::match(['get', 'post'], '/botman', [BotManController::class, 'handle']);
