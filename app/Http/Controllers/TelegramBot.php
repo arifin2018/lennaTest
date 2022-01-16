@@ -40,6 +40,12 @@ class TelegramBot extends Controller
                     'chat_id'   => $chat_id,
                     'text' => 'silahkan masukan angka 1 - 10'
                 ]);
+                if ($text == 1) {
+                    $telegram->sendMessage([
+                        'chat_id'   => $chat_id,
+                        'text' => 'saya ganteng'
+                    ]);
+                }
             }else{
                 $telegram->sendMessage([
                     'chat_id'   => $chat_id,
