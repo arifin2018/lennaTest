@@ -32,7 +32,7 @@ class TelegramBot extends Controller
             $chat_id = $updates['message']['chat']['id'];
             $telegram->sendMessage([
                 'chat_id'   => $chat_id,
-                'text' => 'Hello world!'
+                'text' => $text
             ]);
         }else{
             $telegram->sendMessage([
