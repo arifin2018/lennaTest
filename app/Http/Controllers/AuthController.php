@@ -34,7 +34,7 @@ class AuthController extends Controller
             'data'          => $user,
             'access_token'  => $token,
             'token_type'    => 'Bearer'
-        ]);
+        ], 200);
     }
 
     public function login(Request $request)
@@ -52,7 +52,7 @@ class AuthController extends Controller
             'message' => 'Hello '.$user->name,
             'access_token' => $token,
             'token_type' => 'Bearer'
-        ]);
+        ], 200);
     }
 
     public function logout()
