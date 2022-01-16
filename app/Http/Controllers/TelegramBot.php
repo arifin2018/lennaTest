@@ -34,7 +34,7 @@ class TelegramBot extends Controller
             if ($text == '/start') {
                 $telegram->sendMessage([
                     'chat_id'   => $chat_id,
-                    'text' => $text
+                    'text' => 'anda berhasil masuk'
                 ]);
             }else{
                 $telegram->sendMessage([
