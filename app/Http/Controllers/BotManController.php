@@ -37,11 +37,11 @@ class BotManController extends Controller
         })->stopsConversation();
 
         $botman->hears('/lapor|lapor|laporkan', function (BotMan $bot) {
-            $bot->reply('Silahkan laporkan di email weare@zalabs.my.id . Laporan kamu akan sangat berharga buat kemajuan bot ini.');
+            $bot->reply('Silahkan laporkan di email arifingdr@gmail.com . Laporan kamu akan sangat berharga buat kemajuan bot ini.');
         })->stopsConversation();
 
         $botman->hears('/tentang|about|tentang', function (BotMan $bot) {
-            $bot->reply('HaditsID Telegram Bot By ZaLabs. Mohon maaf jika server terasa lamban, dikarenakan menggunakan free hosting dari Heroku(.)com. Data didapatkan dari https://s.id/zXj6S .');
+            $bot->reply('Lenna interview Telegram Bot By Nur arifin. Mohon maaf jika server terasa lamban, dikarenakan menggunakan free hosting dari Heroku(.)com.');
         })->stopsConversation();
 
         $botman->listen();
